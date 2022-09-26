@@ -33,6 +33,7 @@ protected:
 	// Begin PlayerController interface
 	virtual void PlayerTick(float DeltaTime) override;
 	virtual void SetupInputComponent() override;
+	virtual void BeginPlay() override;
 	// End PlayerController interface
 
 	/** Input handlers for SetDestination action. */
@@ -40,6 +41,8 @@ protected:
 	void OnSetDestinationReleased();
 	void OnTouchPressed(const ETouchIndex::Type FingerIndex, const FVector Location);
 	void OnTouchReleased(const ETouchIndex::Type FingerIndex, const FVector Location);
+
+
 
 private:
 	bool bInputPressed; // Input is bring pressed

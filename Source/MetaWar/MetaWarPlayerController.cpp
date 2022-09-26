@@ -14,6 +14,17 @@ AMetaWarPlayerController::AMetaWarPlayerController()
 	DefaultMouseCursor = EMouseCursor::Default;
 }
 
+void AMetaWarPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	// lock mouse always
+	FInputModeGameAndUI  InputMode;
+	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::LockAlways);
+	SetInputMode(InputMode);
+}
+
+
 void AMetaWarPlayerController::PlayerTick(float DeltaTime)
 {
 	Super::PlayerTick(DeltaTime);
