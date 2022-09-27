@@ -32,3 +32,47 @@ void ACameraPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 }
 
+void ACameraPawn::Move_X()
+{
+	// ScrollSpeed
+	auto PlayerController = GetWorld()->GetFirstPlayerController();
+	float Pos_X,_;
+	PlayerController->GetMousePosition(Pos_X,_);
+	FVector2D Size;
+	GetWorld()->GetGameViewport()->GetViewportSize(Size);
+	auto Rate = Pos_X/Size.X;
+	auto Direction = 0;
+	if (Rate >=0.98)
+	{
+		Direction = 1;
+	}
+	else if (Rate <=0.02)
+	{
+		Direction = -1;
+	}
+	auto DeltaLocation = FVector(0,ScrollSpeed*Direction*GetWorld()->GetDeltaSeconds(),0);
+	AddActorWorldOffset(DeltaLocation);
+}
+
+void ACameraPawn::Move_Y()
+{
+	// ScrollSpeed
+	auto PlayerController = GetWorld()->GetFirstPlayerController();
+	float _,Pos_Y;
+	PlayerController->GetMousePosition(_,Pos_Y);
+	FVector2D Size;
+	GetWorld()->GetGameViewport()->GetViewportSize(Size);
+	auto Rate = Pos_Y/Size.Y;
+	auto Direction = 0;
+	if (Rate >=0.98)
+	{
+		Direction = -1;
+	}
+	else if (Rate <=0.02)
+	{
+		Direction = 1;
+	}
+	auto DeltaLocation = FVector(ScrollSpeed*Direction*GetWorld()->GetDeltaSeconds(),0,0);
+	AddActorWorldOffset(DeltaLocation);
+}
+
