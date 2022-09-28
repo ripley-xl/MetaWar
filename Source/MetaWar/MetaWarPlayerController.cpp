@@ -6,7 +6,6 @@
 #include "NiagaraSystem.h"
 #include "NiagaraFunctionLibrary.h"
 #include "MetaWarCharacter.h"
-#include "Engine/World.h"
 
 AMetaWarPlayerController::AMetaWarPlayerController()
 {
@@ -29,6 +28,11 @@ void AMetaWarPlayerController::PlayerTick(float DeltaTime)
 {
 	Super::PlayerTick(DeltaTime);
 
+	if (!GetPawn()->IsA(AMetaWarCharacter::StaticClass()))
+	{
+		return;
+	}
+
 	if(bInputPressed)
 	{
 		FollowTime += DeltaTime;
@@ -47,8 +51,7 @@ void AMetaWarPlayerController::PlayerTick(float DeltaTime)
 		HitLocation = Hit.Location;
 
 		// Direct the Pawn towards that location
-		APawn* const MyPawn = GetPawn();
-		if(MyPawn)
+		if(APawn* const MyPawn = GetPawn())
 		{
 			FVector WorldDirection = (HitLocation - MyPawn->GetActorLocation()).GetSafeNormal();
 			MyPawn->AddMovementInput(WorldDirection, 1.f, false);
@@ -76,6 +79,10 @@ void AMetaWarPlayerController::SetupInputComponent()
 
 void AMetaWarPlayerController::OnSetDestinationPressed()
 {
+	if (!GetPawn()->IsA(AMetaWarCharacter::StaticClass()))
+	{
+		return;
+	}
 	// We flag that the input is being pressed
 	bInputPressed = true;
 	// Just in case the character was moving because of a previous short press we stop it
@@ -84,6 +91,10 @@ void AMetaWarPlayerController::OnSetDestinationPressed()
 
 void AMetaWarPlayerController::OnSetDestinationReleased()
 {
+	if (!GetPawn()->IsA(AMetaWarCharacter::StaticClass()))
+	{
+		return;
+	}
 	// Player is no longer pressing the input
 	bInputPressed = false;
 
@@ -104,12 +115,20 @@ void AMetaWarPlayerController::OnSetDestinationReleased()
 
 void AMetaWarPlayerController::OnTouchPressed(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
+	if (!GetPawn()->IsA(AMetaWarCharacter::StaticClass()))
+	{
+		return;
+	}
 	bIsTouch = true;
 	OnSetDestinationPressed();
 }
 
 void AMetaWarPlayerController::OnTouchReleased(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
+	if (!GetPawn()->IsA(AMetaWarCharacter::StaticClass()))
+	{
+		return;
+	}
 	bIsTouch = false;
 	OnSetDestinationReleased();
 }
