@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f30772d7-7ed2-4a3b-be8c-5d11936edd35" name="Changes" comment="地图镜头与单位镜头切换" />
+    <list default="true" id="f30772d7-7ed2-4a3b-be8c-5d11936edd35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MetaWar.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MetaWar.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorSettings.ini" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +29,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.0/Engine/Source/Runtime/AIModule/Private/Navigation/NavLinkProxy.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.0/Engine/Source/Runtime/Engine/Classes/Components/InputComponent.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWar.Build.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWarCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWarCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWarGameMode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWarGameMode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWarPlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/MetaWar/MetaWarPlayerController.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -97,6 +102,41 @@
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
       </configuration_6>
+      <configuration_7>
+        <option name="CONFIGURATION" value="Development" />
+        <option name="PLATFORM" value="Mac" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_7>
+      <configuration_8>
+        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="PLATFORM" value="Mac" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_8>
+      <configuration_9>
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Mac" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_9>
+      <configuration_10>
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Mac" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_10>
+      <configuration_11>
+        <option name="CONFIGURATION" value="Shipping" />
+        <option name="PLATFORM" value="Mac" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_11>
       <method v="2">
         <option name="Build" />
       </method>
@@ -126,6 +166,8 @@
       <workItem from="1664207571951" duration="3112000" />
       <workItem from="1664287982782" duration="4353000" />
       <workItem from="1664379047956" duration="3283000" />
+      <workItem from="1665294255012" duration="19000" />
+      <workItem from="1665294311758" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652803605526</created>
@@ -169,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664382897419</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update gitignore">
+      <created>1665294139791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665294139791</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +245,8 @@
     <MESSAGE value="merge" />
     <MESSAGE value="画面随镜头滚动" />
     <MESSAGE value="地图镜头与单位镜头切换" />
-    <option name="LAST_COMMIT_MESSAGE" value="地图镜头与单位镜头切换" />
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
